@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">quickliate</string>
+    <string name="title_activity_p2">p_2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_p3">p_3</string>
+    <string name="title_activity_p4">p_4</string>
+    <string name="title_activity_p5">p_5</string>
+    <string name="title_activity_p6">p_6</string>
+    <string name="title_activity_p7">p_7</string>
+    <string name="title_activity_p9">p_9</string>
+    <string name="title_activity_p10">p_10</string>
+    <string name="title_activity_p11">p_11</string>
+    <string name="title_activity_p12">p_12</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>
