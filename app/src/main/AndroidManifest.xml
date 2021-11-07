@@ -50,6 +50,7 @@
             android:name=".p_5"
             android:exported="false"
             android:label="@string/title_activity_p5"
+            android:screenOrientation="landscape"
             android:theme="@style/Theme.Quickliate.NoActionBar" />
         <activity
             android:name=".p_4"
