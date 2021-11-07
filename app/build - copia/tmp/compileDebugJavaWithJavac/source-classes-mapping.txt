@@ -1,0 +1,210 @@
+com/example/quickliate/databinding/ContentP2Binding.java
+ com.example.quickliate.databinding.ContentP2Binding
+com/example/quickliate/databinding/ActivityP13Binding.java
+ com.example.quickliate.databinding.ActivityP13Binding
+Models/Mensaje.java
+ Models.Mensaje
+com/example/quickliate/databinding/ActivityP12Binding.java
+ com.example.quickliate.databinding.ActivityP12Binding
+com/example/quickliate/data/model/LoggedInUser.java
+ com.example.quickliate.data.model.LoggedInUser
+com/example/quickliate/databinding/ContentP4Binding.java
+ com.example.quickliate.databinding.ContentP4Binding
+com/example/quickliate/activity_p13.java
+ com.example.quickliate.activity_p13
+com/example/quickliate/databinding/ActivityP11Binding.java
+ com.example.quickliate.databinding.ActivityP11Binding
+com/example/quickliate/databinding/ContentP5Binding.java
+ com.example.quickliate.databinding.ContentP5Binding
+com/example/quickliate/databinding/ContentP6Binding.java
+ com.example.quickliate.databinding.ContentP6Binding
+com/example/quickliate/ui/login/LoginViewModelFactory.java
+ com.example.quickliate.ui.login.LoginViewModelFactory
+com/example/quickliate/databinding/ActivityP8Binding.java
+ com.example.quickliate.databinding.ActivityP8Binding
+com/example/quickliate/data/LoginRepository.java
+ com.example.quickliate.data.LoginRepository
+com/example/quickliate/BuildConfig.java
+ com.example.quickliate.BuildConfig
+com/example/quickliate/ui/login/LoggedInUserView.java
+ com.example.quickliate.ui.login.LoggedInUserView
+com/example/quickliate/databinding/ActivityP9Binding.java
+ com.example.quickliate.databinding.ActivityP9Binding
+com/example/quickliate/databinding/ContentP9Binding.java
+ com.example.quickliate.databinding.ContentP9Binding
+com/example/quickliate/p_10.java
+ com.example.quickliate.p_10
+ com.example.quickliate.p_10$1
+com/example/quickliate/p_9.java
+ com.example.quickliate.p_9
+ com.example.quickliate.p_9$1
+com/example/quickliate/databinding/FragmentFirst4Binding.java
+ com.example.quickliate.databinding.FragmentFirst4Binding
+com/example/quickliate/ui/login/LoginViewModel.java
+ com.example.quickliate.ui.login.LoginViewModel
+com/example/quickliate/databinding/FragmentFirst3Binding.java
+ com.example.quickliate.databinding.FragmentFirst3Binding
+com/example/quickliate/Second10Fragment.java
+ com.example.quickliate.Second10Fragment
+ com.example.quickliate.Second10Fragment$1
+com/example/quickliate/databinding/FragmentFirst2Binding.java
+ com.example.quickliate.databinding.FragmentFirst2Binding
+com/example/quickliate/data/LoginDataSource.java
+ com.example.quickliate.data.LoginDataSource
+com/example/quickliate/databinding/ContentP10Binding.java
+ com.example.quickliate.databinding.ContentP10Binding
+com/example/quickliate/databinding/ContentP12Binding.java
+ com.example.quickliate.databinding.ContentP12Binding
+com/example/quickliate/databinding/ContentP11Binding.java
+ com.example.quickliate.databinding.ContentP11Binding
+com/example/quickliate/databinding/ActivityP2Binding.java
+ com.example.quickliate.databinding.ActivityP2Binding
+com/example/quickliate/databinding/FragmentFirstBinding.java
+ com.example.quickliate.databinding.FragmentFirstBinding
+com/example/quickliate/databinding/FragmentSecond9Binding.java
+ com.example.quickliate.databinding.FragmentSecond9Binding
+com/example/quickliate/Second8Fragment.java
+ com.example.quickliate.Second8Fragment
+ com.example.quickliate.Second8Fragment$1
+com/example/quickliate/databinding/ActivityMainBinding.java
+ com.example.quickliate.databinding.ActivityMainBinding
+com/example/quickliate/databinding/FragmentSecond8Binding.java
+ com.example.quickliate.databinding.FragmentSecond8Binding
+com/example/quickliate/Second7Fragment.java
+ com.example.quickliate.Second7Fragment
+ com.example.quickliate.Second7Fragment$1
+com/example/quickliate/databinding/MenasajeVer1Binding.java
+ com.example.quickliate.databinding.MenasajeVer1Binding
+com/example/quickliate/databinding/ActivityP6Binding.java
+ com.example.quickliate.databinding.ActivityP6Binding
+com/example/quickliate/databinding/ActivityP4Binding.java
+ com.example.quickliate.databinding.ActivityP4Binding
+com/example/quickliate/activity_p7.java
+ com.example.quickliate.activity_p7
+com/example/quickliate/databinding/FragmentSecond7Binding.java
+ com.example.quickliate.databinding.FragmentSecond7Binding
+com/example/quickliate/Second6Fragment.java
+ com.example.quickliate.Second6Fragment
+ com.example.quickliate.Second6Fragment$1
+com/example/quickliate/databinding/ActivityP7Binding.java
+ com.example.quickliate.databinding.ActivityP7Binding
+com/example/quickliate/databinding/ActivityP3Binding.java
+ com.example.quickliate.databinding.ActivityP3Binding
+com/example/quickliate/Second2Fragment.java
+ com.example.quickliate.Second2Fragment
+ com.example.quickliate.Second2Fragment$1
+com/example/quickliate/p_7.java
+ com.example.quickliate.p_7
+com/example/quickliate/Second3Fragment.java
+ com.example.quickliate.Second3Fragment
+ com.example.quickliate.Second3Fragment$1
+com/example/quickliate/p_11.java
+ com.example.quickliate.p_11
+ com.example.quickliate.p_11$1
+com/example/quickliate/p_4.java
+ com.example.quickliate.p_4
+ com.example.quickliate.p_4$1
+com/example/quickliate/databinding/ActivityP10Binding.java
+ com.example.quickliate.databinding.ActivityP10Binding
+com/example/quickliate/Second4Fragment.java
+ com.example.quickliate.Second4Fragment
+ com.example.quickliate.Second4Fragment$1
+com/example/quickliate/databinding/ActivityP5Binding.java
+ com.example.quickliate.databinding.ActivityP5Binding
+com/example/quickliate/databinding/FragmentSecond2Binding.java
+ com.example.quickliate.databinding.FragmentSecond2Binding
+com/example/quickliate/databinding/FragmentSecond3Binding.java
+ com.example.quickliate.databinding.FragmentSecond3Binding
+com/example/quickliate/p_12.java
+ com.example.quickliate.p_12
+ com.example.quickliate.p_12$1
+com/example/quickliate/databinding/ActivityLoginBinding.java
+ com.example.quickliate.databinding.ActivityLoginBinding
+com/example/quickliate/ui/login/LoginResult.java
+ com.example.quickliate.ui.login.LoginResult
+com/example/quickliate/databinding/FragmentSecond6Binding.java
+ com.example.quickliate.databinding.FragmentSecond6Binding
+com/example/quickliate/databinding/FragmentSecond4Binding.java
+ com.example.quickliate.databinding.FragmentSecond4Binding
+com/example/quickliate/ui/login/LoginActivity.java
+ com.example.quickliate.ui.login.LoginActivity
+ com.example.quickliate.ui.login.LoginActivity$1
+ com.example.quickliate.ui.login.LoginActivity$2
+ com.example.quickliate.ui.login.LoginActivity$3
+ com.example.quickliate.ui.login.LoginActivity$4
+ com.example.quickliate.ui.login.LoginActivity$5
+com/example/quickliate/Second9Fragment.java
+ com.example.quickliate.Second9Fragment
+ com.example.quickliate.Second9Fragment$1
+com/example/quickliate/p_6.java
+ com.example.quickliate.p_6
+ com.example.quickliate.p_6$1
+com/example/quickliate/FirstFragment.java
+ com.example.quickliate.FirstFragment
+ com.example.quickliate.FirstFragment$1
+com/example/quickliate/SecondFragment.java
+ com.example.quickliate.SecondFragment
+ com.example.quickliate.SecondFragment$1
+com/example/quickliate/MainActivity.java
+ com.example.quickliate.MainActivity
+com/example/quickliate/p_2.java
+ com.example.quickliate.p_2
+ com.example.quickliate.p_2$1
+com/example/quickliate/databinding/FragmentFirst8Binding.java
+ com.example.quickliate.databinding.FragmentFirst8Binding
+com/example/quickliate/p_8.java
+ com.example.quickliate.p_8
+com/example/quickliate/databinding/FragmentFirst9Binding.java
+ com.example.quickliate.databinding.FragmentFirst9Binding
+com/example/quickliate/p_5.java
+ com.example.quickliate.p_5
+ com.example.quickliate.p_5$1
+ com.example.quickliate.p_5$2
+ com.example.quickliate.p_5$3
+ com.example.quickliate.p_5$4
+com/example/quickliate/data/Result.java
+ com.example.quickliate.data.Result
+ com.example.quickliate.data.Result$1
+ com.example.quickliate.data.Result$Error
+ com.example.quickliate.data.Result$Success
+com/example/quickliate/First10Fragment.java
+ com.example.quickliate.First10Fragment
+ com.example.quickliate.First10Fragment$1
+com/example/quickliate/databinding/MenasajeVerBinding.java
+ com.example.quickliate.databinding.MenasajeVerBinding
+com/example/quickliate/ui/login/LoginFormState.java
+ com.example.quickliate.ui.login.LoginFormState
+com/example/quickliate/First8Fragment.java
+ com.example.quickliate.First8Fragment
+ com.example.quickliate.First8Fragment$1
+com/example/quickliate/databinding/FragmentFirst6Binding.java
+ com.example.quickliate.databinding.FragmentFirst6Binding
+com/example/quickliate/First9Fragment.java
+ com.example.quickliate.First9Fragment
+ com.example.quickliate.First9Fragment$1
+com/example/quickliate/p_3.java
+ com.example.quickliate.p_3
+ com.example.quickliate.p_3$1
+com/example/quickliate/First4Fragment.java
+ com.example.quickliate.First4Fragment
+ com.example.quickliate.First4Fragment$1
+com/example/quickliate/databinding/FragmentSecondBinding.java
+ com.example.quickliate.databinding.FragmentSecondBinding
+com/example/quickliate/First6Fragment.java
+ com.example.quickliate.First6Fragment
+ com.example.quickliate.First6Fragment$1
+com/example/quickliate/First3Fragment.java
+ com.example.quickliate.First3Fragment
+ com.example.quickliate.First3Fragment$1
+com/example/quickliate/databinding/FragmentSecond10Binding.java
+ com.example.quickliate.databinding.FragmentSecond10Binding
+com/example/quickliate/First2Fragment.java
+ com.example.quickliate.First2Fragment
+ com.example.quickliate.First2Fragment$1
+adapter/MensajeAdapter.java
+ adapter.MensajeAdapter
+ adapter.MensajeAdapter$ViewHolder
+com/example/quickliate/databinding/FragmentFirst10Binding.java
+ com.example.quickliate.databinding.FragmentFirst10Binding
+com/example/quickliate/databinding/ContentP3Binding.java
+ com.example.quickliate.databinding.ContentP3Binding

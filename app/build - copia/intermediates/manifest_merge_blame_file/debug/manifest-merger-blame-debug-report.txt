@@ -1,0 +1,221 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.quickliate"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="27"
+8-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml
+10
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:5-79
+13-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:26:5-67
+14-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:26:22-64
+15
+16    <application
+16-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:5:5-79:19
+17        android:allowBackup="true"
+17-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:6:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.5.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\4b18baa9266eba5441dc9be7b537a834\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:extractNativeLibs="false"
+21        android:icon="@mipmap/ic_launcher"
+21-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:7:9-43
+22        android:label="@string/app_name"
+22-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:8:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:9:9-54
+24        android:supportsRtl="true"
+24-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:10:9-35
+25        android:testOnly="true"
+26        android:theme="@style/Theme.Quickliate" >
+26-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:11:9-48
+27        <activity
+27-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:12:9-15:60
+28            android:name="com.example.quickliate.ui.login.LoginActivity"
+28-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:13:13-51
+29            android:exported="false"
+29-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:14:13-37
+30            android:label="@string/title_activity_login" />
+30-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:15:13-57
+31        <activity
+31-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:16:9-20:67
+32            android:name="com.example.quickliate.p_12"
+32-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:17:13-33
+33            android:exported="false"
+33-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:18:13-37
+34            android:label="@string/title_activity_p12"
+34-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:19:13-55
+35            android:theme="@style/Theme.Quickliate.NoActionBar" />
+35-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:20:13-64
+36        <activity
+36-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:21:9-25:67
+37            android:name="com.example.quickliate.p_11"
+37-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:22:13-33
+38            android:exported="false"
+38-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:23:13-37
+39            android:label="@string/title_activity_p11"
+39-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:24:13-55
+40            android:theme="@style/Theme.Quickliate.NoActionBar" />
+40-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:25:13-64
+41        <activity
+41-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:26:9-30:67
+42            android:name="com.example.quickliate.p_10"
+42-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:27:13-33
+43            android:exported="false"
+43-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:28:13-37
+44            android:label="@string/title_activity_p10"
+44-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:29:13-55
+45            android:theme="@style/Theme.Quickliate.NoActionBar" />
+45-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:30:13-64
+46        <activity
+46-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:31:9-35:67
+47            android:name="com.example.quickliate.p_9"
+47-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:32:13-32
+48            android:exported="false"
+48-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:33:13-37
+49            android:label="@string/title_activity_p9"
+49-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:34:13-54
+50            android:theme="@style/Theme.Quickliate.NoActionBar" />
+50-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:35:13-64
+51        <activity
+51-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:36:9-38:40
+52            android:name="com.example.quickliate.p_8"
+52-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:37:13-32
+53            android:exported="false" />
+53-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:38:13-37
+54        <activity
+54-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:39:9-43:67
+55            android:name="com.example.quickliate.p_7"
+55-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:40:13-32
+56            android:exported="false"
+56-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:41:13-37
+57            android:label="@string/title_activity_p7"
+57-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:42:13-54
+58            android:theme="@style/Theme.Quickliate.NoActionBar" />
+58-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:43:13-64
+59        <activity
+59-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:44:9-48:67
+60            android:name="com.example.quickliate.p_6"
+60-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:45:13-32
+61            android:exported="false"
+61-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:46:13-37
+62            android:label="@string/title_activity_p6"
+62-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:47:13-54
+63            android:theme="@style/Theme.Quickliate.NoActionBar" />
+63-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:48:13-64
+64        <activity
+64-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:49:9-54:67
+65            android:name="com.example.quickliate.p_5"
+65-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:50:13-32
+66            android:exported="false"
+66-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:51:13-37
+67            android:label="@string/title_activity_p5"
+67-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:52:13-54
+68            android:screenOrientation="landscape"
+68-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:53:13-50
+69            android:theme="@style/Theme.Quickliate.NoActionBar" />
+69-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:54:13-64
+70        <activity
+70-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:55:9-59:67
+71            android:name="com.example.quickliate.p_4"
+71-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:56:13-32
+72            android:exported="false"
+72-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:57:13-37
+73            android:label="@string/title_activity_p4"
+73-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:58:13-54
+74            android:theme="@style/Theme.Quickliate.NoActionBar" />
+74-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:59:13-64
+75        <activity
+75-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:60:9-64:67
+76            android:name="com.example.quickliate.p_3"
+76-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:61:13-32
+77            android:exported="false"
+77-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:62:13-37
+78            android:label="@string/title_activity_p3"
+78-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:63:13-54
+79            android:theme="@style/Theme.Quickliate.NoActionBar" />
+79-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:64:13-64
+80        <activity
+80-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:65:9-69:67
+81            android:name="com.example.quickliate.p_2"
+81-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:66:13-32
+82            android:exported="false"
+82-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:67:13-37
+83            android:label="@string/title_activity_p2"
+83-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:68:13-54
+84            android:theme="@style/Theme.Quickliate.NoActionBar" />
+84-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:69:13-64
+85        <activity
+85-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:70:9-78:20
+86            android:name="com.example.quickliate.MainActivity"
+86-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:71:13-41
+87            android:exported="true" >
+87-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:72:13-36
+88            <intent-filter>
+88-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:73:13-77:29
+89                <action android:name="android.intent.action.MAIN" />
+89-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:74:17-69
+89-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:74:25-66
+90
+91                <category android:name="android.intent.category.LAUNCHER" />
+91-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:76:17-77
+91-->D:\aplicaciones HTML\quickliate app\app\src\main\AndroidManifest.xml:76:27-74
+92            </intent-filter>
+93        </activity>
+94
+95        <service
+95-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:29:9-35:19
+96            android:name="com.google.firebase.components.ComponentDiscoveryService"
+96-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:30:13-84
+97            android:directBootAware="true"
+97-->[com.google.firebase:firebase-common:20.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+98            android:exported="false" >
+98-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:31:13-37
+99            <meta-data
+99-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
+100                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+100-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-database:20.0.2] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\6df2497b371575efde943d8fc11fc0d6\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
+102        </service>
+103
+104        <provider
+104-->[com.google.firebase:firebase-common:20.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+105            android:name="com.google.firebase.provider.FirebaseInitProvider"
+105-->[com.google.firebase:firebase-common:20.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+106            android:authorities="com.example.quickliate.firebaseinitprovider"
+106-->[com.google.firebase:firebase-common:20.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+107            android:directBootAware="true"
+107-->[com.google.firebase:firebase-common:20.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+108            android:exported="false"
+108-->[com.google.firebase:firebase-common:20.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+109            android:initOrder="100" />
+109-->[com.google.firebase:firebase-common:20.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\45b4a080f8d120803c4464eae4da744b\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+110
+111        <activity
+111-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\61327252b97b04f60e697e9245a0fce3\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+112            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+112-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\61327252b97b04f60e697e9245a0fce3\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+113            android:exported="false"
+113-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\61327252b97b04f60e697e9245a0fce3\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+114            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+114-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\61327252b97b04f60e697e9245a0fce3\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+115
+116        <meta-data
+116-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\e0a06e1db4d4e2db64a90134643f665b\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+117            android:name="com.google.android.gms.version"
+117-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\e0a06e1db4d4e2db64a90134643f665b\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+118            android:value="@integer/google_play_services_version" />
+118-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\15-cw1012\Desktop\gradle-7.0.2\caches\transforms-3\e0a06e1db4d4e2db64a90134643f665b\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+119    </application>
+120
+121</manifest>
