@@ -19,8 +19,9 @@
         android:id="@+id/imageView2"
         android:layout_width="90dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="168dp"
+        android:layout_marginStart="168dp"
         android:layout_marginTop="196dp"
+        android:contentDescription="@string/conten_desc_datos_image"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/iconografica" />
@@ -29,21 +30,25 @@
         android:id="@+id/imageView3"
         android:layout_width="90dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="160dp"
         android:layout_marginTop="328dp"
+        android:layout_marginStart="168dp"
+        android:contentDescription="@string/conten_desc_alarma_imagen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/iconoalertas" />
+        app:srcCompat="@mipmap/iconoalertas"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="90dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="160dp"
+        android:layout_marginStart="168dp"
         android:layout_marginTop="448dp"
+        android:contentDescription="@string/conten_desc_engranage_imagen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/iconoconfiguracion" />
+        app:srcCompat="@mipmap/iconoconfiguracion"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView"
@@ -51,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
-        android:text="Hola Apuertas2021"
+        android:text="@string/text_hola_apuertas2021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -61,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:text="Nov 07, 2021"
+        android:text="@string/text_nov_07_2021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -71,6 +76,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="-65dp"
         android:layout_marginTop="-2dp"
+        android:contentDescription="@string/conten_desc_foto_perfil"
         app:layout_constraintStart_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/zd" />
@@ -80,9 +86,11 @@
         android:layout_width="90dp"
         android:layout_height="50dp"
         android:layout_marginStart="-250dp"
+        android:contentDescription="@string/conten_desc_logo"
         app:layout_constraintStart_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo" />
+        app:srcCompat="@mipmap/logo"
+        tools:ignore="ImageContrastCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

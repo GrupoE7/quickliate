@@ -4,11 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/15-cw1012/Desktop/quickliate app/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/57310/Documents/MisionTic2022/Ciclo 4 - App Movil/Quicklimate App/quickliate/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.11278447121820616" />
+        <entry key="..\:/Users/57310/Documents/MisionTic2022/Ciclo 4 - App Movil/Quicklimate App/quickliate/app/src/main/res/layout-w936dp/activity_login.xml" value="0.131640625" />
+        <entry key="..\:/Users/57310/Documents/MisionTic2022/Ciclo 4 - App Movil/Quicklimate App/quickliate/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/57310/Documents/MisionTic2022/Ciclo 4 - App Movil/Quicklimate App/quickliate/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/57310/Documents/MisionTic2022/Ciclo 4 - App Movil/Quicklimate App/quickliate/app/src/main/res/layout/activity_p10.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/57310/Documents/MisionTic2022/Ciclo 4 - App Movil/Quicklimate App/quickliate/app/src/main/res/layout/activity_p13.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/57310/Documents/MisionTic2022/Ciclo 4 - App Movil/Quicklimate App/quickliate/app/src/main/res/layout/activity_p7.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/57310/Documents/MisionTic2022/Ciclo 4 - App Movil/Quicklimate App/quickliate/app/src/main/res/layout/menasaje_ver.xml" value="0.17552083333333332" />
         <entry key="..\:/aplicaciones HTML/quickliate app/app/src/main/res/layout/activity_main.xml" value="0.2203125" />
         <entry key="..\:/aplicaciones HTML/quickliate app/app/src/main/res/layout/activity_p2.xml" value="0.2" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
