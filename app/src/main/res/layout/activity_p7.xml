@@ -19,8 +19,9 @@
         android:id="@+id/imageView"
         android:layout_width="90dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="296dp"
+        android:contentDescription="@string/conten_desc_usuarios_imagen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/iconopersonas" />
@@ -29,29 +30,32 @@
         android:id="@+id/imageView2"
         android:layout_width="90dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="164dp"
+        android:layout_marginStart="164dp"
         android:layout_marginTop="300dp"
+        android:contentDescription="@string/conten_desc_datos_image"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/iconografica"
-        android:contentDescription="TODO" />
+        app:srcCompat="@mipmap/iconografica" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="90dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="304dp"
+        android:layout_marginStart="304dp"
         android:layout_marginTop="296dp"
+        android:contentDescription="@string/conten_desc_alarma_imagen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/iconoalertas" />
+        app:srcCompat="@mipmap/iconoalertas"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="90dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="444dp"
+        android:contentDescription="@string/conten_desc_mas_imagen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/iconomas" />
@@ -60,11 +64,13 @@
         android:id="@+id/imageView6"
         android:layout_width="90dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="304dp"
+        android:layout_marginStart="304dp"
         android:layout_marginTop="444dp"
+        android:contentDescription="@string/conten_desc_engranage_imagen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/iconoconfiguracion" />
+        app:srcCompat="@mipmap/iconoconfiguracion"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView"
@@ -72,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="84dp"
-        android:text="Hola Administrador"
+        android:text="@string/text_Hola_administrador"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="8dp"
-        android:text="Nov 07, 2021"
+        android:text="@string/text_nov_07_2021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -93,6 +99,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="-65dp"
         android:layout_marginTop="-2dp"
+        android:contentDescription="@string/conten_desc_foto_perfil"
         app:layout_constraintStart_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/zd" />
@@ -103,6 +110,7 @@
         android:layout_height="73dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="72dp"
+        android:contentDescription="@string/conten_desc_ubicacion_imagen"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@mipmap/iconoubicacion" />
@@ -112,7 +120,9 @@
         android:layout_width="90dp"
         android:layout_height="50dp"
         android:layout_marginStart="-250dp"
+        android:contentDescription="@string/conten_desc_logo"
         app:layout_constraintStart_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo" />
+        app:srcCompat="@mipmap/logo"
+        tools:ignore="ImageContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
