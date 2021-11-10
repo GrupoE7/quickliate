@@ -35,6 +35,19 @@
 
     <string name="boton_anterior">Home</string>
     <string name="tv2">primer segundo</string>
+    <string name="conten_desc_datos_image">datos</string>
+    <string name="conten_desc_alarma_imagen">alarma imagen</string>
+    <string name="conten_desc_configuracion_imagen">configuracion imagen</string>
+    <string name="conten_desc_engranage_imagen">engranage imagen</string>
+    <string name="text_hola_apuertas2021">Hola Apuertas2021</string>
+    <string name="texto_nov_07_2021">Nov 07, 2021</string>
+    <string name="conten_desc_foto_perfil">foto perfil</string>
+    <string name="conten_desc_logo">logo</string>
+    <string name="conten_desc_ubicacion_imagen">ubicacion imagen</string>
+    <string name="conten_desc_mas_imagen">mas imagen</string>
+    <string name="text_Hola_administrador">Hola Administrador</string>
+    <string name="text_nov_07_2021">Nov 07, 2021</string>
+    <string name="conten_desc_usuarios_imagen">usuarios imagen</string>
 
 
 </resources>
