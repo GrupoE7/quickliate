@@ -206,6 +206,7 @@ private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
     }
 
     //////////////////////////Hora///////////////
+    //pendiente roooooonalllllllllllll ojooooo////////////////////////////////////////////
     private void getMensajesFromFirebaseHora(){
         mibase=  FirebaseDatabase.getInstance().getReference();
         mibase .child(fechaIngreso).addValueEventListener(new ValueEventListener() {
