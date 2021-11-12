@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         //Si los datos tienen contenido
         if(!user.equals("") && !pass.equals("")) {
             if (user.equals("admin") && pass.equals("admin")) {
-                Intent newIntent = new Intent(this, p_7.class);
+                Intent newIntent = new Intent(this, Activity7.class);
                 startActivity(newIntent);
                 finish();
             }
