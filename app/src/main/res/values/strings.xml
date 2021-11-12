@@ -48,6 +48,25 @@
     <string name="text_Hola_administrador">Hola Administrador</string>
     <string name="text_nov_07_2021">Nov 07, 2021</string>
     <string name="conten_desc_usuarios_imagen">usuarios imagen</string>
+    <string name="content_desc_icono_usuarios">icono usuarios</string>
+    <string name="content_desc_icono_datos">icono datos</string>
+    <string name="usuarios_imagen">usuarios imagen</string>
+    <string name="alarmas_imagen">alarmas imagen</string>
+    <string name="configuracion_imagen">configuracion imagen</string>
+    <string name="engranage_imagen">engranage_imagen</string>
+    <string name="logo_purpura">logo purpura</string>
+    <string name="foto">foto</string>
+    <string name="perfil">perfil</string>
+    <string name="imgdato">imgdato</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="usuario">Usuario</string>
+    <string name="agregar_nuevo_usuario">Agregar nuevo usuario</string>
+    <string name="cargo">Cargo</string>
+    <string name="Departamento">Departamento</string>
+    <string name="Municipio">Municipio</string>
+    <string name="Telefono_m_vil">Telefono móvil</string>
+    <string name="direccion_de_residencia">direccion_de_residencia</string>
+    <string name="nombre_y_apellido">Nombre y Apellido</string>
 
 
 </resources>
