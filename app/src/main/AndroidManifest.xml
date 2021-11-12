@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quickliate">
         <activity
+            android:name=".Activity9"
+            android:exported="false" />
+
+        <activity
+            android:name=".Activity13"
+            android:exported="false" />
+        <activity
+            android:name=".Activity7"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
