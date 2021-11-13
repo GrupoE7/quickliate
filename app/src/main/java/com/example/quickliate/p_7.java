@@ -1,6 +1,5 @@
 package com.example.quickliate;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -30,8 +29,6 @@ public class p_7 extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-
-
        // NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_p7);
         //appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
@@ -39,19 +36,10 @@ public class p_7 extends AppCompatActivity {
 
     }
 
-
    // @Override
    // public boolean onSupportNavigateUp() {
 //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_p7);
       //  return NavigationUI.navigateUp(navController, appBarConfiguration)
       //          || super.onSupportNavigateUp();
    // }
-
-
-
-    public void irap5(View view){
-        Intent i = new Intent(this,p_9.class);
-        startActivity(i);
-
-    }
 }

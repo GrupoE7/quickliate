@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPassword6"
+        android:id="@+id/telefono"
         android:layout_width="304dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -26,7 +26,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPassword7"
+        android:id="@+id/nombre_apellido"
         android:layout_width="304dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -42,7 +42,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPassword5"
+        android:id="@+id/municipio"
         android:layout_width="304dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -98,7 +98,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/correo"
         android:layout_width="304dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -115,7 +115,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/Password"
         android:layout_width="304dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -131,23 +131,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="304dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="@string/cargo"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418"
-        tools:ignore="TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/direccion_recidencia"
         android:layout_width="304dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -163,7 +147,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPassword4"
+        android:id="@+id/departamento"
         android:layout_width="304dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -191,6 +175,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.102" />
+
+    <Button
+        android:id="@+id/guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="396dp"
+        android:layout_height="118dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefono">
+
+        <RadioButton
+            android:id="@+id/rbAdministrador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Administrador" />
+
+        <RadioButton
+            android:id="@+id/rbTrabajador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trabajador" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
