@@ -11,20 +11,41 @@
 
         <TextView
             android:id="@+id/textVerMensaje"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="mensaje"
+            android:layout_width="179dp"
+            android:layout_height="42dp"
+            android:text="mensaje1"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="-6dp"></TextView>
+            tools:layout_editor_absoluteX="31dp" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:background="@color/purple_700"
-            app:layout_constraintTop_toBottomOf="@+id/textVerMensaje"
-            tools:layout_editor_absoluteX="-22dp">
+            android:id="@+id/textVerMensaje2"
+            android:layout_width="179dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="64dp"
+            android:text="mensajes2"
+            app:layout_constraintStart_toEndOf="@+id/textVerMensaje"
+            tools:layout_editor_absoluteY="4dp" />
 
-        </TextView>
+        <TextView
+            android:id="@+id/textVerMensaje3"
+            android:layout_width="179dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp"
+            android:text="mensajes3"
+            app:layout_constraintStart_toEndOf="@+id/textVerMensaje2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="727dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="@+id/textVerMensaje2"
+            tools:layout_editor_absoluteX="2dp" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

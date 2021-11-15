@@ -45,13 +45,7 @@ private MensajeAdapter madapter;
 private RecyclerView mrecyclerView;
 private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
 
-    private MensajeAdapter madapter1;
-    private RecyclerView mrecyclerView1;
-    private ArrayList<Mensaje> mMensajeList1 = new ArrayList<>();
 
-    private MensajeAdapter madapter2;
-    private RecyclerView mrecyclerView2;
-    private ArrayList<Mensaje> mMensajeList2 = new ArrayList<>();
 
 
     @Override
@@ -66,11 +60,7 @@ private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
         mrecyclerView = (RecyclerView) findViewById(R.id.mesajes);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        mrecyclerView1 = (RecyclerView) findViewById(R.id.mesajes2);
-        mrecyclerView1.setLayoutManager(new LinearLayoutManager(this));
 
-        mrecyclerView2 = (RecyclerView) findViewById(R.id.mesajes3);
-        mrecyclerView2.setLayoutManager(new LinearLayoutManager(this));
 
 
 
@@ -127,8 +117,8 @@ private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
                     /////////////////Adapter////
 
                    getMensajesFromFirebaseHumedad();
-                    getMensajesFromFirebaseTemp();
-                    getMensajesFromFirebaseHora();
+                    //getMensajesFromFirebaseTemp();
+                    //getMensajesFromFirebaseHora();
 
 
 
@@ -155,9 +145,11 @@ private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
                 if(snapshot.exists()){
                     mMensajeList.clear();
                     for(DataSnapshot ds:snapshot.getChildren()){
-                        String temperatures =ds.child("Hum").getValue().toString();
+                        String Hum =ds.child("Hum").getValue().toString();
+                        String Temp =ds.child("Temp").getValue().toString();
+                        String Hora =ds.child("hora").getValue().toString();
 
-                        mMensajeList.add(new  Mensaje(temperatures));
+                        mMensajeList.add(new  Mensaje(Hum,Temp,Hora));
                     }
                     madapter = new MensajeAdapter(mMensajeList,R.layout.menasaje_ver);
                     mrecyclerView.setAdapter(madapter);
@@ -180,58 +172,9 @@ private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
 
 
     //////////////////////////temp///////////////
-    private void getMensajesFromFirebaseTemp(){
-        mibase=  FirebaseDatabase.getInstance().getReference();
-        mibase .child(fechaIngreso).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    mMensajeList1.clear();
-                    for(DataSnapshot ds:snapshot.getChildren()){
-                        String hummed = Objects.requireNonNull(ds.child("Temp").getValue()).toString();
 
-                        mMensajeList1.add(new  Mensaje(hummed));
-                    }
-                    madapter1 = new MensajeAdapter(mMensajeList1,R.layout.menasaje_ver);
-                    mrecyclerView1.setAdapter(madapter1);
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }});
-
-    }
 
     //////////////////////////Hora///////////////
-    private void getMensajesFromFirebaseHora(){
-        mibase=  FirebaseDatabase.getInstance().getReference();
-        mibase .child(fechaIngreso).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    mMensajeList2.clear();
-                    for(DataSnapshot ds:snapshot.getChildren()){
 
-                        //String hummed = Objects.requireNonNull(ds.child("Temp").getValue()).toString();
-                        String hora = Objects.requireNonNull(ds.child("hora").getValue()).toString();
-
-
-                        mMensajeList2.add(new  Mensaje(hora));
-                    }
-                    madapter2 = new MensajeAdapter(mMensajeList2,R.layout.menasaje_ver);
-                    mrecyclerView2.setAdapter(madapter2);
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }});
-
-    }
 
 }

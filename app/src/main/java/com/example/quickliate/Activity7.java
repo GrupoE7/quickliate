@@ -24,12 +24,12 @@ public class Activity7 extends AppCompatActivity {
 
     }
     public void alarma(View view){
-        Intent b = new Intent(this,p_6.class);
+        Intent b = new Intent(this,p_5.class);
         startActivity(b);
 
     }
     public void irconfigurasensor(View view){
-        Intent c = new Intent(this,p_11.class);
+        Intent c = new Intent(this,p_5.class);
         startActivity(c);
 
     }
