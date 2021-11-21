@@ -48,7 +48,8 @@
             android:theme="@style/Theme.Quickliate.NoActionBar" />
         <activity
             android:name=".p_8"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".p_7"
             android:exported="false"

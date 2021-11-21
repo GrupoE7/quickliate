@@ -14,7 +14,7 @@ public class Activity7 extends AppCompatActivity {
         setContentView(R.layout.activity_7);
     }
     public void usuarios(View view){
-        Intent i = new Intent(this,Activity9.class);
+        Intent i = new Intent(this,p_8.class);
         startActivity(i);
 
     }
