@@ -11,6 +11,7 @@ import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -28,8 +29,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
 
-import Models.Mensaje;
-import adapter.MensajeAdapter;
+
+import Models.Mensaje2;
+
+import adapter.MensajeAdapter2;
 
 
 public class p_5 extends AppCompatActivity implements View.OnClickListener {
@@ -41,46 +44,37 @@ TextView ef;
 private int dia,mes,ano;
 private String fechaIngreso;
 private DatabaseReference mibase;
-private MensajeAdapter madapter;
+private MensajeAdapter2 madapter2;
 private RecyclerView mrecyclerView;
-private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
+private ArrayList<Mensaje2> mMensajeList = new ArrayList<>();
+private EditText enombre_sensor;
+private String nombresensor;
+    private TextView fechaver;
 
-    private MensajeAdapter madapter1;
-    private RecyclerView mrecyclerView1;
-    private ArrayList<Mensaje> mMensajeList1 = new ArrayList<>();
-
-    private MensajeAdapter madapter2;
     private RecyclerView mrecyclerView2;
-    private ArrayList<Mensaje> mMensajeList2 = new ArrayList<>();
+    private ArrayList<Mensaje2> mMensajeList2 = new ArrayList<>();
+
+
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_p5);
+        enombre_sensor =(EditText) findViewById(R.id.nombre_sensor);
+        fechaver=(TextView) findViewById(R.id.Fechaselc) ;
 
         bfecha=(Button) findViewById(R.id.fecha);
         efecha=(EditText) findViewById(R.id.fecha_edit);
         bfecha.setOnClickListener(this);
-        ef=findViewById(R.id.fe);
+
         mrecyclerView = (RecyclerView) findViewById(R.id.mesajes);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        mrecyclerView1 = (RecyclerView) findViewById(R.id.mesajes2);
-        mrecyclerView1.setLayoutManager(new LinearLayoutManager(this));
-
-        mrecyclerView2 = (RecyclerView) findViewById(R.id.mesajes3);
+        mrecyclerView2 = (RecyclerView) findViewById(R.id.recVerTemp);
         mrecyclerView2.setLayoutManager(new LinearLayoutManager(this));
-
-
-
-
-
-
-
-
-
-
 
     }
     public void casa(View view){
@@ -101,47 +95,24 @@ private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
-                    efecha.setText(dayOfMonth+"/"+(month+1)+"/"+year);
-                    fechaIngreso=(year+"-"+(month+1)+"-0"+dayOfMonth);
+                    fechaver.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+                    fechaIngreso=(year+"-"+(month+1)+"-"+dayOfMonth);
 
-                    //////////////////////////////////////////
-                    //FirebaseDatabase database = FirebaseDatabase.getInstance();
-                   // DatabaseReference myRef = database.getReference("2021-11-05");
-                    // Read from the database
-
-                  //mibase .child("2021-11-05").addValueEventListener(new ValueEventListener() {
-                  //    @Override
-                  //    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    //    if(snapshot.exists()){
-                     //        String humedad =snapshot.child("Hum").getValue().toString();
-                     //        D.setText(humedad);
-                     //    }
-
-                     // }
-
-                     // @Override
-                    // public void onCancelled(@NonNull DatabaseError error) {
-
-                     // }});
-
-                    /////////////////Adapter////
-
-                   getMensajesFromFirebaseHumedad();
-                    getMensajesFromFirebaseTemp();
-                    getMensajesFromFirebaseHora();
+                        getMensajesFromFirebaseHumedad();
+                        getMensajesFromFirebaseTemp();
 
 
 
 
 
 
-                    ////////////////////////////
+
+
 
                 }
             }
             ,dia,mes,ano);
             datePickerDialog.show();
-
         }
 
     }
@@ -149,18 +120,66 @@ private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
 
     private void getMensajesFromFirebaseHumedad(){
         mibase=  FirebaseDatabase.getInstance().getReference();
-        mibase .child(fechaIngreso).addValueEventListener(new ValueEventListener() {
+        nombresensor=enombre_sensor.getText().toString();
+
+        mibase .child("Sensor").child(nombresensor).child(fechaIngreso).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     mMensajeList.clear();
                     for(DataSnapshot ds:snapshot.getChildren()){
-                        String temperatures =ds.child("Hum").getValue().toString();
+                        String Hum =ds.child("Hum").getValue().toString();
+                       // String Temp =ds.child("Temp").getValue().toString();
 
-                        mMensajeList.add(new  Mensaje(temperatures));
+                        String Temp ="dentro";
+                        String Hora =ds.child("hora").getValue().toString();
+
+                        mMensajeList.add(new  Mensaje2(Temp,Hum,Hora));
                     }
-                    madapter = new MensajeAdapter(mMensajeList,R.layout.menasaje_ver);
-                    mrecyclerView.setAdapter(madapter);
+                    madapter2 = new MensajeAdapter2(mMensajeList,R.layout.menasaje_ver1);
+                    mrecyclerView.setAdapter(madapter2);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(p_5.this,"Verifique los datos e intente de nuevo ",Toast.LENGTH_SHORT).show();
+
+
+            }});
+
+
+
+        /////////////////////////////temp//////////////
+
+
+
+    }
+
+
+    //////////////////////////temp///////////////
+    private void getMensajesFromFirebaseTemp(){
+        mibase=  FirebaseDatabase.getInstance().getReference();
+        nombresensor=enombre_sensor.getText().toString();
+
+        mibase .child("Sensor").child(nombresensor).child(fechaIngreso).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    mMensajeList2.clear();
+                    for(DataSnapshot ds:snapshot.getChildren()){
+                        //String Hum =ds.child("Hum").getValue().toString();
+                        String Temp =ds.child("Temp").getValue().toString();
+                        //int Hum=Integer.parseInt(ds.child("Hum").getValue().toString());
+                         String Hum ="dentro";
+                        //String Temp ="temp";
+                        String Hora =ds.child("hora").getValue().toString();
+
+                        mMensajeList2.add(new  Mensaje2(Hum,Temp,Hora));
+                    }
+                    madapter2 = new MensajeAdapter2(mMensajeList2,R.layout.menasaje_ver1);
+                    mrecyclerView2.setAdapter(madapter2);
                 }
 
             }
@@ -179,60 +198,7 @@ private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
     }
 
 
-    //////////////////////////temp///////////////
-    private void getMensajesFromFirebaseTemp(){
-        mibase=  FirebaseDatabase.getInstance().getReference();
-        mibase .child(fechaIngreso).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    mMensajeList1.clear();
-                    for(DataSnapshot ds:snapshot.getChildren()){
-                        String hummed = Objects.requireNonNull(ds.child("Temp").getValue()).toString();
-
-                        mMensajeList1.add(new  Mensaje(hummed));
-                    }
-                    madapter1 = new MensajeAdapter(mMensajeList1,R.layout.menasaje_ver);
-                    mrecyclerView1.setAdapter(madapter1);
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }});
-
-    }
-
     //////////////////////////Hora///////////////
-    //pendiente roooooonalllllllllllll ojooooo////////////////////////////////////////////
-    private void getMensajesFromFirebaseHora(){
-        mibase=  FirebaseDatabase.getInstance().getReference();
-        mibase .child(fechaIngreso).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    mMensajeList2.clear();
-                    for(DataSnapshot ds:snapshot.getChildren()){
 
-                        //String hummed = Objects.requireNonNull(ds.child("Temp").getValue()).toString();
-                        String hora = Objects.requireNonNull(ds.child("hora").getValue()).toString();
-
-
-                        mMensajeList2.add(new  Mensaje(hora));
-                    }
-                    madapter2 = new MensajeAdapter(mMensajeList2,R.layout.menasaje_ver);
-                    mrecyclerView2.setAdapter(madapter2);
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }});
-
-    }
 
 }

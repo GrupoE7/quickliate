@@ -121,7 +121,7 @@ public class Activity9 extends AppCompatActivity {
                     Map<String,Object> map = new HashMap<>();
                     map.put("nombre ", nombre);
                     map.put("correo ", correo);
-                    map.put("contraseña ", contrasena);
+              
                     map.put("cargo ", cargo);
                     map.put("direccion ", recidencia);
                     map.put("departamento ", departamento);
