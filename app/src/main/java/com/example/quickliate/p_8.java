@@ -26,10 +26,6 @@ public class p_8 extends AppCompatActivity {
     private MensajeAdapter madapter;
     private RecyclerView mrecyclerView;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

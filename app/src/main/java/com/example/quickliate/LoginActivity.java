@@ -109,6 +109,7 @@ public class LoginActivity extends AppCompatActivity {
                     String cargoTrabajador="Trabajador";
                     nver.setText(cargo);
                     if (cargo.equals(cargoAdministrador) ){
+
                         startActivity(new Intent(LoginActivity.this,Activity7.class));
                         finish();
                     }
