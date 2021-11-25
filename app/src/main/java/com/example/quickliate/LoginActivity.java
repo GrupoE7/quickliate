@@ -1,10 +1,15 @@
 package com.example.quickliate;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
@@ -58,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(getApplicationContext(), p_3.class);
+                Intent newIntent = new Intent(getApplicationContext(), RecuperarActivity.class);
                 startActivity(newIntent);
                 finish();
             }
@@ -68,20 +73,54 @@ public class LoginActivity extends AppCompatActivity {
     //Crear metodo Login, el View para activarlo desde diseño
     //Ir al onClick del boton para que cargue ese metodo
     public void Login(View view){
-        //1. Comparar que los textos tengan datos
+        //Si no hay conexión se muestra mensaje
+        if(!comprobarConexion(this)){
+            new AlertDialog.Builder(this, R.style.Theme_AppCompat_Dialog_Alert)
+                    //Icono que se va a mostrar, icono siguiente
+                    .setIcon(android.R.drawable.ic_dialog_info)
+                    //Titulo que debe poner al dialogo
+                    .setTitle("Información")
+                    //Mensaje que debe poner al cuadro de dialogo
+                    .setMessage("Por favor conéctate a Internet para continuar")
+                    .setPositiveButton("Conectar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(Settings.ACTION_SETTINGS));
+                        }
+                    })
+                    .setNegativeButton("Cancelar", null).show();
+        }
+
+        //Comparar que los textos tengan datos
         user = et1.getText().toString();
         pass = et2.getText().toString();
         //Si los datos tienen contenido
         if(!user.isEmpty() && !pass.isEmpty()){
             loginUser();
-
         }
         else
         {
             Toast.makeText(LoginActivity.this,"Ingrese Datos",Toast.LENGTH_SHORT).show();
-
         }
     }
+
+    //Comprobar si hay conexión a Internet
+    private boolean comprobarConexion(LoginActivity recuperarActivity) {
+        //Crear componente de tipo Connectivity Manager
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+        //Crear variable de tipo NetworkInfo
+        //La variable contiene toda la información de la red
+        NetworkInfo wifiConexion = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo movilConexion = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+        if((wifiConexion!= null && wifiConexion.isConnectedOrConnecting() || movilConexion!= null && movilConexion.isConnectedOrConnecting())){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     private void loginUser(){
         mAut.signInWithEmailAndPassword(user,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
