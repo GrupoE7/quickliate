@@ -39,7 +39,7 @@ public class Activity7 extends AppCompatActivity {
 
     }
     public void irconfigura(View view){
-        Intent e = new Intent(this,Activity13.class);
+        Intent e = new Intent(this,activity_4.class);
         startActivity(e);
 
     }
