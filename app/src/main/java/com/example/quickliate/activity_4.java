@@ -44,4 +44,7 @@ public class activity_4 extends AppCompatActivity {
             imgView.setImageBitmap(imgBitmap);
         }
     }
+
+
+
 }

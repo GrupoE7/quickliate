@@ -45,11 +45,6 @@
             android:label="@string/title_activity_p12"
             android:theme="@style/Theme.Quickliate.NoActionBar" />
         <activity
-            android:name=".p_10"
-            android:exported="false"
-            android:label="@string/title_activity_p10"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
             android:name=".p_9"
             android:exported="false"
             android:label="@string/title_activity_p9"
@@ -59,11 +54,6 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".p_7"
-            android:exported="false"
-            android:label="@string/title_activity_p7"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
             android:name=".p_6"
             android:exported="false"
             android:label="@string/title_activity_p6"
@@ -71,16 +61,6 @@
         <activity
             android:name=".p_5"
             android:exported="false" />
-        <activity
-            android:name=".p_4"
-            android:exported="false"
-            android:label="@string/title_activity_p4"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
-            android:name=".p_2"
-            android:exported="false"
-            android:label="@string/title_activity_p2"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
