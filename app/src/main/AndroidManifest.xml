@@ -10,9 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quickliate">
         <activity
+            android:name=".activity_4"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_5"
+            android:exported="false" />
+        <activity
+            android:name=".p_11"
+            android:exported="false"
+            android:label="@string/title_activity_p11"
+            android:theme="@style/Theme.Quickliate.NoActionBar" />
+        <activity
             android:name=".Activity9"
             android:exported="false" />
-
         <activity
             android:name=".Activity13"
             android:exported="false" />
@@ -32,28 +45,14 @@
             android:label="@string/title_activity_p12"
             android:theme="@style/Theme.Quickliate.NoActionBar" />
         <activity
-            android:name=".p_11"
-            android:exported="false"
-            android:label="@string/title_activity_p11"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
-            android:name=".p_10"
-            android:exported="false"
-            android:label="@string/title_activity_p10"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
             android:name=".p_9"
             android:exported="false"
             android:label="@string/title_activity_p9"
             android:theme="@style/Theme.Quickliate.NoActionBar" />
         <activity
             android:name=".p_8"
-            android:exported="false" />
-        <activity
-            android:name=".p_7"
             android:exported="false"
-            android:label="@string/title_activity_p7"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
+            android:screenOrientation="landscape" />
         <activity
             android:name=".p_6"
             android:exported="false"
@@ -61,25 +60,7 @@
             android:theme="@style/Theme.Quickliate.NoActionBar" />
         <activity
             android:name=".p_5"
-            android:exported="false"
-            android:label="@string/title_activity_p5"
-            android:screenOrientation="landscape"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
-            android:name=".p_4"
-            android:exported="false"
-            android:label="@string/title_activity_p4"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
-            android:name=".p_3"
-            android:exported="false"
-            android:label="@string/title_activity_p3"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
-            android:name=".p_2"
-            android:exported="false"
-            android:label="@string/title_activity_p2"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

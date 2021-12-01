@@ -1,51 +1,63 @@
 package com.example.quickliate;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-import androidx.appcompat.app.AppCompatActivity;
+import java.util.ArrayList;
 
-import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.quickliate.databinding.ActivityP11Binding;
+import Models.Mensaje;
+import adapter.MensajeAdapter;
 
 public class p_11 extends AppCompatActivity {
+    private MensajeAdapter madapter;
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityP11Binding binding;
+    private RecyclerView mrecyclerView;
+    private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
+    private DatabaseReference mibase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_p11);
+        mrecyclerView = (RecyclerView) findViewById(R.id.verSensore);
+        mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mibase=  FirebaseDatabase.getInstance().getReference();
 
-        binding = ActivityP11Binding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        setSupportActionBar(binding.toolbar);
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_p11);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        mibase .child("Sensor").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    mMensajeList.clear();
+                    for(DataSnapshot ds:snapshot.getChildren()){
+                        String Hum =ds.child("Hum").getValue().toString();
+                        String Temp =ds.child("Temp").getValue().toString();
+                        String Hora =ds.child("hora").getValue().toString();
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_p11);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+                        mMensajeList.add(new  Mensaje(Hum,Temp,Hora));
+                    }
+                    madapter = new MensajeAdapter(mMensajeList,R.layout.menasaje_ver);
+                    mrecyclerView.setAdapter(madapter);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }});
+
+
+
+        /////////////////////////////temp//////////////
     }
 }

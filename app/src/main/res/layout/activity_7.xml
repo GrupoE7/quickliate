@@ -110,20 +110,6 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="120dp"
-        android:layout_height="56dp"
-        android:contentDescription="@string/logo_purpura"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/logo"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
         android:id="@+id/imageView18"
         android:layout_width="100dp"
         android:layout_height="57dp"
@@ -133,7 +119,19 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.029"
         app:srcCompat="@mipmap/perfil" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.009"
+        app:srcCompat="@drawable/logo_corto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@ public class Activity7 extends AppCompatActivity {
         setContentView(R.layout.activity_7);
     }
     public void usuarios(View view){
-        Intent i = new Intent(this,Activity9.class);
+        Intent i = new Intent(this,p_8.class);
         startActivity(i);
 
     }
@@ -24,12 +24,12 @@ public class Activity7 extends AppCompatActivity {
 
     }
     public void alarma(View view){
-        Intent b = new Intent(this,p_6.class);
+        Intent b = new Intent(this,p_5.class);
         startActivity(b);
 
     }
     public void irconfigurasensor(View view){
-        Intent c = new Intent(this,p_11.class);
+        Intent c = new Intent(this,p_5.class);
         startActivity(c);
 
     }
@@ -39,7 +39,7 @@ public class Activity7 extends AppCompatActivity {
 
     }
     public void irconfigura(View view){
-        Intent e = new Intent(this,Activity13.class);
+        Intent e = new Intent(this,activity_4.class);
         startActivity(e);
 
     }
