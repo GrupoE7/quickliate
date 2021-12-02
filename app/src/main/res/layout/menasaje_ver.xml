@@ -14,6 +14,7 @@
             android:layout_width="179dp"
             android:layout_height="42dp"
             android:text="mensaje1"
+            android:textColor="#000000"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="31dp" />
 
@@ -23,6 +24,7 @@
             android:layout_height="42dp"
             android:layout_marginStart="64dp"
             android:text="mensajes2"
+            android:textColor="#000000"
             app:layout_constraintStart_toEndOf="@+id/textVerMensaje"
             tools:layout_editor_absoluteY="4dp" />
 
@@ -33,6 +35,7 @@
             android:layout_marginStart="60dp"
             android:layout_marginTop="4dp"
             android:text="mensajes3"
+            android:textColor="#000000"
             app:layout_constraintStart_toEndOf="@+id/textVerMensaje2"
             app:layout_constraintTop_toTopOf="parent" />
 

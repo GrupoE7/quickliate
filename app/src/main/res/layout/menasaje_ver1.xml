@@ -16,7 +16,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:text="mensaje1"
-            android:textSize="24sp"
+            android:textColor="#332222"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,7 +28,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:text="mensaje2"
-            android:textSize="24sp"
+            android:textColor="#392727"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/dato1"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +44,7 @@
             android:textColorHighlight="#CD0E0E"
             android:textColorHint="#E81313"
             android:textColorLink="#E81313"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/dato2"
             app:layout_constraintTop_toTopOf="parent" />
 
