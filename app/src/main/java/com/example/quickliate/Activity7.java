@@ -29,7 +29,7 @@ public class Activity7 extends AppCompatActivity {
 
     }
     public void irconfigurasensor(View view){
-        Intent c = new Intent(this,p_5.class);
+        Intent c = new Intent(this,p_11.class);
         startActivity(c);
 
     }
