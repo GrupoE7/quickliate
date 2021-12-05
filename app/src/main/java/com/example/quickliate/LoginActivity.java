@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Html;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -41,6 +43,10 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Bloquear la rotación de pantalla, quedará vertical obligatoriamente
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         setContentView(R.layout.activity_login);
         mAut=FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -167,5 +173,29 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
+    //Metodo para confirmar si el usuario quiere realmente salir de la aplicación
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        //Averiguar si el evento es pulsar boton de devolverse
+        if(keyCode == KeyEvent.KEYCODE_BACK) {
+            //Crear en tiempo de ejecución, cuadro de dialogo
+            new AlertDialog.Builder(this, R.style.Theme_AppCompat_Dialog_Alert)
+                    //Icono que se va a mostrar, icono siguiente
+                    .setIcon(android.R.drawable.ic_dialog_info)
+                    //Titulo que debe poner al dialogo
+                    .setTitle("Información")
+                    //Mensaje que debe poner al cuadro de dialogo
+                    .setMessage("¿Desea salir de la aplicación?")
+                    //Boton negativo, parametros: que dira el boton, y que hace al seleccionar
+                    .setNegativeButton("No", null)
+                    //Boton positivo, new DialogInter... es un metodo escuchador
+                    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            LoginActivity.this.finish();
+                        }
+                    }).show();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }
