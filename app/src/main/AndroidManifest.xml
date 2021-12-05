@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quickliate">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Quickliate">
+
+        <activity
+            android:name=".Activity12"
+            android:exported="false" />
+        <activity
+            android:name=".AlertasActivity"
+            android:exported="false"
+            android:label="Configurar Alertas" />
         <activity
             android:name=".activity_4"
             android:exported="false" />
         <activity
             android:name=".RecuperarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Recuperar contraseña" />
         <activity
             android:name=".Activity_5"
             android:exported="false" />
@@ -36,28 +47,9 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
-        <activity
-            android:name=".p_12"
-            android:exported="false"
-            android:label="@string/title_activity_p12"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
-            android:name=".p_9"
-            android:exported="false"
-            android:label="@string/title_activity_p9"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
-        <activity
             android:name=".p_8"
             android:exported="false"
             android:screenOrientation="landscape" />
-        <activity
-            android:name=".p_6"
-            android:exported="false"
-            android:label="@string/title_activity_p6"
-            android:theme="@style/Theme.Quickliate.NoActionBar" />
         <activity
             android:name=".p_5"
             android:exported="false" />
