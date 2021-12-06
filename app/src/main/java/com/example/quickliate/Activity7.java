@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Activity7 extends AppCompatActivity {
+    private String sitioVer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_7);
+        sitioVer = getIntent().getStringExtra("sitio");
+
     }
     public void usuarios(View view){
         Intent i = new Intent(this,p_8.class);
@@ -39,8 +42,9 @@ public class Activity7 extends AppCompatActivity {
 
     }
     public void irconfigura(View view){
-        Intent e = new Intent(this,activity_4.class);
-        startActivity(e);
+        Intent b = new Intent(this, activity_4.class);
+        b.putExtra("id",sitioVer);
+        startActivity(b);
 
     }
 }

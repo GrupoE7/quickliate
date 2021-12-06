@@ -10,11 +10,13 @@ import android.view.KeyEvent;
 import android.view.View;
 
 public class Activity13 extends AppCompatActivity {
+    private  String sitioVer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_13);
+         sitioVer = getIntent().getStringExtra("sitio");
     }
 
     public void irdatos(View view) {
@@ -27,6 +29,7 @@ public class Activity13 extends AppCompatActivity {
     }
     public void iraconfi(View view) {
         Intent b = new Intent(this, activity_4.class);
+        b.putExtra("id",sitioVer);
         startActivity(b);
     }
 

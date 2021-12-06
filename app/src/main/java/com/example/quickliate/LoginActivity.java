@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
     private String pass ="";
     private DatabaseReference mDatabase;
     private TextView nver;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,7 +145,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
     private void datosUsuario(){
-        String id  = mAut.getCurrentUser().getUid();
+         id  = mAut.getCurrentUser().getUid();
         mDatabase.child("Usuarios").child(id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -154,12 +155,18 @@ public class LoginActivity extends AppCompatActivity {
                     String cargoTrabajador="Trabajador";
                     nver.setText(cargo);
                     if (cargo.equals(cargoAdministrador) ){
+                        Intent a = new Intent(LoginActivity.this,Activity7.class);
 
-                        startActivity(new Intent(LoginActivity.this,Activity7.class));
+                        //startActivity(new Intent(LoginActivity.this,Activity7.class));
+                        a.putExtra("sitio",id);
+                        startActivity(a);
                         finish();
                     }
                     else if(cargo.equals(cargoTrabajador)){
-                        startActivity(new Intent(LoginActivity.this,Activity13.class));
+                        Intent i = new Intent(LoginActivity.this,Activity13.class);
+                        //startActivity(new Intent(LoginActivity.this,Activity13.class));
+                        i.putExtra("sitio",id);
+                        startActivity(i);
                         finish();
 
                     }
