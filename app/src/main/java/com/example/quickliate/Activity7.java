@@ -27,7 +27,7 @@ public class Activity7 extends AppCompatActivity {
 
     }
     public void alarma(View view){
-        Intent b = new Intent(this,p_5.class);
+        Intent b = new Intent(this,AlertasActivity.class);
         startActivity(b);
 
     }

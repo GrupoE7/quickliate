@@ -24,7 +24,7 @@ public class Activity13 extends AppCompatActivity {
         startActivity(a);
     }
     public void iralarm(View view) {
-        Intent b = new Intent(this, AlertasActivity.class);
+        Intent b = new Intent(this, p_5.class);
         startActivity(b);
     }
     public void iraconfi(View view) {

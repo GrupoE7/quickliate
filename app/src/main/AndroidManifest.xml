@@ -86,6 +86,10 @@
             android:name=".p_5"
             android:exported="false" />
         <activity
+            android:name=".AlertasActivity"
+            android:label="configurar alertas"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -26,27 +26,6 @@ public class AlertasActivity extends AppCompatActivity {
         etN4 = (EditText) findViewById(R.id.editTextNumber4);
     }
 
-    //Finalizar la actividad al activar el boton volver
-    public void onBackPressed(){
-        //Llamar a la anterior actividad
-        Intent newIntent = new Intent(getApplicationContext(), Activity7.class);
-        //Lanzar la actividad
-        startActivity(newIntent);
-        finish();
-    }
-
-    //Metodo para averiguar que hizo el usuario, si oprimio el boton
-    public boolean onOptionsItemSelected(MenuItem menuItem){
-        //Cuando el usuario pulsa en el ActionBar, se genera un codigo
-        //Devuelve un numero que se guarda en id
-        int id = menuItem.getItemId();
-        //Comparar si los codigos estan asociados, para el caso con el boton retornar
-        if(id == android.R.id.home){
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(menuItem);
-    }
 
     //Crear metodo Guardardatos1, el View para activarlo desde diseño
     //Ir al onClick del boton para que cargue ese metodo
