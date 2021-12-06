@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Activity7 extends AppCompatActivity {
+    private String sitioVer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_7);
+        sitioVer = getIntent().getStringExtra("sitio");
+
     }
     public void usuarios(View view){
         Intent i = new Intent(this,p_8.class);
@@ -24,23 +27,24 @@ public class Activity7 extends AppCompatActivity {
 
     }
     public void alarma(View view){
-        Intent b = new Intent(this,p_5.class);
+        Intent b = new Intent(this,AlertasActivity.class);
         startActivity(b);
 
     }
     public void irconfigurasensor(View view){
-        Intent c = new Intent(this,p_5.class);
+        Intent c = new Intent(this,p_11.class);
         startActivity(c);
 
     }
     public void irubica(View view){
-        Intent d = new Intent(this,p_12.class);
+        Intent d = new Intent(this,MapsActivity.class);
         startActivity(d);
 
     }
     public void irconfigura(View view){
-        Intent e = new Intent(this,activity_4.class);
-        startActivity(e);
+        Intent b = new Intent(this, activity_4.class);
+        b.putExtra("id",sitioVer);
+        startActivity(b);
 
     }
 }

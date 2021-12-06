@@ -68,6 +68,16 @@
     <string name="direccion_de_residencia">direccion_de_residencia</string>
     <string name="nombre_y_apellido">Nombre y Apellido</string>
     <string name="agregar_foto_de_perfil">Agregar foto de perfil</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
+    <string name="latitude_label">Latitud</string>
+    <string name="longitude_label">Longitud</string>
+
+    <string-array name="lista_sensores_gps">
+        <item>Sensor temp 1</item>
+        <item>Sensor temp 2</item>
+        <item>Sensor hum 1</item>
+        <item>Sensor hum 2</item>
+    </string-array>
 
 </resources>

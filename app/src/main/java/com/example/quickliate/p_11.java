@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,7 +19,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import Models.Mensaje;
+import Models.Mensaje2;
 import adapter.MensajeAdapter;
+import adapter.MensajeAdapter2;
 
 public class p_11 extends AppCompatActivity {
     private MensajeAdapter madapter;
@@ -24,6 +29,7 @@ public class p_11 extends AppCompatActivity {
     private RecyclerView mrecyclerView;
     private ArrayList<Mensaje> mMensajeList = new ArrayList<>();
     private DatabaseReference mibase;
+    private Button btbuscar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +38,39 @@ public class p_11 extends AppCompatActivity {
         mrecyclerView = (RecyclerView) findViewById(R.id.verSensore);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mibase=  FirebaseDatabase.getInstance().getReference();
+        btbuscar= (Button) findViewById(R.id.Buscar);
 
-        mibase .child("Sensor").addValueEventListener(new ValueEventListener() {
+        btbuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(p_11.this, p_5.class);
+                startActivity(i);
+
+            }
+        });
+
+
+
+
+
+
+
+
+        mibase = FirebaseDatabase.getInstance().getReference();
+
+
+        mibase=  FirebaseDatabase.getInstance().getReference();
+        mibase .child("Nombre Sensor").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     mMensajeList.clear();
                     for(DataSnapshot ds:snapshot.getChildren()){
-                        String Hum =ds.child("Hum").getValue().toString();
-                        String Temp =ds.child("Temp").getValue().toString();
-                        String Hora =ds.child("hora").getValue().toString();
+                        String cargo =ds.child("Gps").getValue().toString();//cargo//
+                        String nombre =ds.child("Ubicacion").getValue().toString();//nombre//
+                        String contrasena =" ";
 
-                        mMensajeList.add(new  Mensaje(Hum,Temp,Hora));
+                        mMensajeList.add(new  Mensaje(contrasena,cargo,nombre));
                     }
                     madapter = new MensajeAdapter(mMensajeList,R.layout.menasaje_ver);
                     mrecyclerView.setAdapter(madapter);
@@ -56,6 +83,9 @@ public class p_11 extends AppCompatActivity {
 
             }});
 
+
+
+        /////////////////////////////temp//////////////
 
 
         /////////////////////////////temp//////////////

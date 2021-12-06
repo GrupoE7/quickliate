@@ -1,18 +1,14 @@
 package com.example.quickliate;
 
 import android.app.DatePickerDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,11 +23,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Objects;
-
 
 import Models.Mensaje2;
-
 import adapter.MensajeAdapter2;
 
 
@@ -50,6 +43,7 @@ private ArrayList<Mensaje2> mMensajeList = new ArrayList<>();
 private EditText enombre_sensor;
 private String nombresensor;
     private TextView fechaver;
+    private Button btnombre_sensores;
 
     private RecyclerView mrecyclerView2;
     private ArrayList<Mensaje2> mMensajeList2 = new ArrayList<>();
@@ -75,6 +69,18 @@ private String nombresensor;
 
         mrecyclerView2 = (RecyclerView) findViewById(R.id.recVerTemp);
         mrecyclerView2.setLayoutManager(new LinearLayoutManager(this));
+        btnombre_sensores= (Button) findViewById(R.id.nombreVer);
+
+
+        btnombre_sensores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent e = new Intent(p_5.this,p_11.class);
+                startActivity(e);
+
+            }
+        });
+
 
     }
     public void casa(View view){
@@ -96,10 +102,20 @@ private String nombresensor;
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
                     fechaver.setText(dayOfMonth+"/"+(month+1)+"/"+year);
-                    fechaIngreso=(year+"-"+(month+1)+"-"+dayOfMonth);
+                    fechaIngreso=(year+"-"+(month+1)+"-0"+dayOfMonth);
 
+                        nombresensor=enombre_sensor.getText().toString();
+                    if (!nombresensor.isEmpty()){
                         getMensajesFromFirebaseHumedad();
                         getMensajesFromFirebaseTemp();
+
+                    }
+                    else {
+                        Toast.makeText(p_5.this,"Ingrese nombre de sensor",Toast.LENGTH_SHORT).show();
+
+
+                    }
+
 
 
 
@@ -120,7 +136,7 @@ private String nombresensor;
 
     private void getMensajesFromFirebaseHumedad(){
         mibase=  FirebaseDatabase.getInstance().getReference();
-        nombresensor=enombre_sensor.getText().toString();
+
 
         mibase .child("Sensor").child(nombresensor).child(fechaIngreso).addValueEventListener(new ValueEventListener() {
             @Override
@@ -131,7 +147,7 @@ private String nombresensor;
                         String Hum =ds.child("Hum").getValue().toString();
                        // String Temp =ds.child("Temp").getValue().toString();
 
-                        String Temp ="dentro";
+                        String Temp ="Out";
                         String Hora =ds.child("hora").getValue().toString();
 
                         mMensajeList.add(new  Mensaje2(Temp,Hum,Hora));
@@ -161,7 +177,7 @@ private String nombresensor;
     //////////////////////////temp///////////////
     private void getMensajesFromFirebaseTemp(){
         mibase=  FirebaseDatabase.getInstance().getReference();
-        nombresensor=enombre_sensor.getText().toString();
+
 
         mibase .child("Sensor").child(nombresensor).child(fechaIngreso).addValueEventListener(new ValueEventListener() {
             @Override
@@ -172,7 +188,7 @@ private String nombresensor;
                         //String Hum =ds.child("Hum").getValue().toString();
                         String Temp =ds.child("Temp").getValue().toString();
                         //int Hum=Integer.parseInt(ds.child("Hum").getValue().toString());
-                         String Hum ="dentro";
+                         String Hum ="Int";
                         //String Temp ="temp";
                         String Hora =ds.child("hora").getValue().toString();
 
